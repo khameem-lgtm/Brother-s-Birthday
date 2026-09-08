@@ -1,0 +1,108 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Baloo 2',cursive;
+  color:#35234a;
+  background:#fff8e9;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(circle at 10% 15%,#ffd6e7 0 9%,transparent 10%),
+    radial-gradient(circle at 90% 20%,#d7f5ff 0 10%,transparent 11%),
+    radial-gradient(circle at 20% 90%,#fff0a8 0 9%,transparent 10%);
+}
+.navbar{
+  height:68px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;
+  background:#ffffffd9;backdrop-filter:blur(12px);position:sticky;top:0;z-index:20;
+  box-shadow:0 3px 18px #5b2c6f18
+}
+.logo{font-size:22px;font-weight:800;color:#ef4f8b}
+.navbar a{text-decoration:none;color:#5b3b76;font-weight:700;font-size:17px}
+.hero{
+  min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;
+  text-align:center;position:relative;padding:70px 20px;
+  background:linear-gradient(135deg,#ff8fba 0%,#b98cff 48%,#67d9f5 100%);
+  overflow:hidden
+}
+.hero:after{
+  content:"";position:absolute;left:-5%;right:-5%;bottom:-80px;height:180px;
+  background:#fff8e9;border-radius:50% 50% 0 0
+}
+.hero-content{max-width:850px;position:relative;z-index:3}
+.badge{display:inline-block;background:#fff;color:#ef4f8b;padding:9px 20px;border-radius:999px;font-weight:800;box-shadow:0 8px 20px #7c3f9150}
+h1{font-size:clamp(55px,9vw,105px);line-height:.9;margin:25px 0 12px;color:#fff;text-shadow:5px 6px 0 #7b43a0}
+h1 span{color:#fff36c}
+.hero h2{font-size:clamp(28px,5vw,48px);color:#fff;font-weight:800;text-shadow:2px 3px 0 #7b43a0}
+.hero p{font-family:'Fredoka',sans-serif;color:#fff;font-size:20px;line-height:1.6;max-width:680px;margin:18px auto}
+button{
+  border:0;cursor:pointer;font:700 19px 'Baloo 2';padding:13px 30px;border-radius:999px;
+  color:#fff;background:#ef4f8b;box-shadow:0 7px 0 #b52f65;transition:.2s
+}
+button:hover{transform:translateY(-3px);box-shadow:0 10px 0 #b52f65}
+button:active{transform:translateY(3px);box-shadow:0 3px 0 #b52f65}
+.hero-cake{position:absolute;font-size:90px;z-index:2;animation:bob 3s ease-in-out infinite}
+.cake-left{left:6%;top:18%}.cake-right{right:6%;bottom:20%;animation-delay:1s}
+.sparkle{position:absolute;color:#fff36c;font-size:50px;animation:spin 5s linear infinite}
+.s1{left:18%;top:25%}.s2{right:20%;top:18%;animation-delay:1.2s}
+.section{padding:95px 6%}
+.section-heading{text-align:center;margin-bottom:45px}
+.section-heading span{font-size:44px}
+.section-heading h2{font-size:48px;color:#6a3b82;line-height:1.05}
+.section-heading p{font:18px 'Fredoka';color:#806c88;margin-top:8px}
+.memory{background:#fff8e9}
+.photo-card{
+  max-width:850px;margin:auto;background:#fff;padding:15px;border-radius:30px;
+  box-shadow:0 20px 50px #5b2c6f22;position:relative;transform:rotate(-1deg)
+}
+.photo-card img{width:100%;display:block;border-radius:20px;max-height:720px;object-fit:contain;background:#eee}
+.photo-ribbon{
+  position:absolute;z-index:3;top:28px;left:-12px;background:#ffdc4a;color:#5a3971;
+  padding:9px 25px;font-weight:800;transform:rotate(-4deg);box-shadow:3px 4px 0 #d4a91b
+}
+.photo-caption{text-align:center;font-size:25px;font-weight:800;padding:12px;color:#ef4f8b}
+.wishes{background:#fff}
+.wish-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.wish-card{padding:35px 27px;border-radius:30px;min-height:330px;text-align:center;box-shadow:0 15px 35px #54335e18;transition:.3s;border:5px solid #fff}
+.wish-card:hover{transform:translateY(-12px) rotate(1deg)}
+.wish-card .icon{font-size:55px}
+.wish-card h3{font-size:27px;margin:8px 0 12px}
+.wish-card p{font:17px/1.7 'Fredoka'}
+.pink{background:#ffd7e7}.pink h3{color:#d83c78}
+.yellow{background:#fff0a9}.yellow h3{color:#bc8500}
+.blue{background:#d5f4ff}.blue h3{color:#2787ae}
+.cake-section{background:linear-gradient(135deg,#fff0a8,#ffd9ed);text-align:center}
+.cake-box{max-width:750px;margin:auto;background:#ffffffd9;padding:45px 25px;border-radius:35px;box-shadow:0 20px 50px #75426a20}
+.cake{font-size:115px;line-height:1;animation:bob 2s ease-in-out infinite}
+.cake-box h2{font-size:44px;color:#ef4f8b;margin:10px 0}
+.cake-box p{font:18px 'Fredoka';margin-bottom:20px;color:#6f5c76}
+.cake-decoration{font-size:25px;letter-spacing:10px}
+#wishMessage{margin-top:25px;background:#dff8df;padding:18px;border-radius:20px;color:#39733e;font-size:19px}
+.hidden{display:none}
+.message{background:#7f55b8;padding-top:100px;padding-bottom:100px}
+.letter{
+  max-width:850px;margin:auto;background:#fffdf6;padding:55px 45px;border-radius:25px;
+  box-shadow:12px 15px 0 #5b3c8d;text-align:center;position:relative
+}
+.letter:before{content:"";position:absolute;inset:12px;border:2px dashed #ef7eaa;border-radius:18px;pointer-events:none}
+.letter-sticker{font-size:55px}
+.letter h2{font-size:45px;color:#ef4f8b;margin-bottom:20px}
+.letter p{font:18px/1.8 'Fredoka';color:#66586d;margin:15px auto;max-width:700px}
+.signature{font-size:24px;font-weight:800;color:#7b4b99;margin-top:25px}
+footer{text-align:center;background:#35234a;color:#fff;padding:25px;font-size:16px}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+.confetti-piece{position:absolute;width:10px;height:18px;top:-30px;animation:fall 3.5s linear forwards}
+@keyframes bob{50%{transform:translateY(-13px) rotate(3deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@media(max-width:800px){
+  .navbar{padding:0 5%}.navbar a{display:none}
+  .hero{min-height:85vh;padding:50px 18px}
+  .hero-cake{font-size:55px}.cake-left{left:2%;top:12%}.cake-right{right:2%;bottom:15%}
+  .section{padding:70px 18px}.section-heading h2{font-size:38px}
+  .wish-grid{grid-template-columns:1fr}
+  .wish-card{min-height:auto}
+  .letter{padding:40px 22px}.letter h2{font-size:36px}
+  .photo-card{transform:none;padding:8px}.photo-ribbon{font-size:13px}
+}
